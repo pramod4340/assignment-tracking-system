@@ -9,4 +9,13 @@ urlpatterns = [
             "post": "create",
         }),
     ),
+    path(
+        "<int:pk>/",
+        AssignmentViewSet.as_view({
+            "get": "retrieve",
+            "put": "update",
+            "patch": "partial_update",
+            "delete": "destroy",
+        }),
+    ),
 ]
